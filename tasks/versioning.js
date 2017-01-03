@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         });
 
 
-        if (hastype == date){
+        if (hastype == 'date'){
             var cd = new Date();
             var codeVersion = cd.getFullYear() + cd.getMonth() + cd.getHours() + cd.getMinutes() + cd.getSeconds();
         }
