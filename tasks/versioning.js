@@ -6,6 +6,24 @@ module.exports = function(grunt) {
 
     var embeddedFiles = {};
 
+    function customMonthFormated(date) {
+        if(!date)
+            date = new Date();
+
+        var month = date.getMonth();
+
+        return month < 9 ? "0" + (month+1) : month+1;
+    }
+
+    function customDayFormated(date) {
+        if(!date)
+            date = new Date();
+
+        var day = date.getDay();
+
+        return day < 9 ? "0" + day : day;
+    }
+
     grunt.registerMultiTask('versioning', 'Assets versioning', function() {
         var filenames = getNames(this.data.files);
         var doc = this.data.doc;
@@ -18,7 +36,7 @@ module.exports = function(grunt) {
 
         if (hastype == 'date'){
             var cd = new Date();
-            var codeVersion = cd.getFullYear() +''+ cd.getMonth() +''+ cd.getDay()+''+ cd.getHours() +''+ cd.getMinutes() +''+ cd.getSeconds();
+            var codeVersion = cd.getFullYear() +''+ customMontFormated() +''+ customDayFormated() +''+ cd.getHours() +''+ cd.getMinutes() +''+ cd.getSeconds();
         }
         else if (hastype = 'custom'){
             var codeVersion = hashvalue;
