@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 
         if (hastype == 'date'){
             var cd = new Date();
-            var codeVersion = cd.getFullYear() +''+ customMontFormated() +''+ customDayFormated() +''+ cd.getHours() +''+ cd.getMinutes() +''+ cd.getSeconds();
+            var codeVersion = cd.getFullYear() +''+ customMonthFormated() +''+ customDayFormated() +''+ cd.getHours() +''+ cd.getMinutes() +''+ cd.getSeconds();
         }
         else if (hastype = 'custom'){
             var codeVersion = hashvalue;
