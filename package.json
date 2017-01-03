@@ -1,0 +1,33 @@
+{
+  "name": "grunt-contrib-versioning2",
+  "version": "1.0.1",
+  "description": "assets versioning grunt",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sytnei/grunt-contrib-versioning2.git"
+  },
+  "keywords": [
+    "grunt",
+    "assets",
+    "versioning"
+  ],
+  "author": "Ciocoiu Ionut Marius",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sytnei/grunt-contrib-versioning2/issues"
+  },
+  "homepage": "https://github.com/sytnei/grunt-contrib-versioning2#readme",
+  "maintainers": [
+    {
+     "name": "sytnei",
+     "email": "ionut_dina@yahoo.com"
+    }
+  ],
+  "files": [
+    "tasks"
+  ]
+}
+
