@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         if(!date)
             date = new Date();
 
-        var day = date.getDay();
+        var day = date.getDate();
 
         return day < 9 ? "0" + day : day;
     }
@@ -94,6 +94,9 @@ module.exports = function(grunt) {
             var file = files.js[i];
             var m = file.src.split('/');
             r.push(m[m.length - 1]);
+            if (file.embedded) {
+                embeddedFiles[file.src] = file.src;
+            }
         }
         return r;
     }
